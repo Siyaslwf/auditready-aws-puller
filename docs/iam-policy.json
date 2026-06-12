@@ -1,0 +1,37 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AuditReadyReadOnlyPullForSOC2",
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:DescribeTrails",
+        "cloudtrail:LookupEvents",
+        "cloudtrail:GetTrailStatus",
+        "cloudtrail:GetEventSelectors",
+        "iam:ListUsers",
+        "iam:ListAccessKeys",
+        "iam:GetAccessKeyLastUsed",
+        "iam:ListMFADevices",
+        "iam:GetAccountPasswordPolicy",
+        "iam:ListAttachedUserPolicies",
+        "iam:ListAttachedRolePolicies",
+        "iam:GetAccountSummary",
+        "guardduty:ListDetectors",
+        "guardduty:ListFindings",
+        "guardduty:GetCoverageStatistics",
+        "guardduty:GetDetector",
+        "securityhub:DescribeStandards",
+        "securityhub:GetEnabledStandards",
+        "securityhub:GetFindings",
+        "securityhub:DescribeHub",
+        "config:DescribeConfigurationRecorders",
+        "config:DescribeConfigurationRecorderStatus",
+        "config:DescribeComplianceByConfigRule",
+        "config:DescribeConfigRules",
+        "ec2:DescribeRegions"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

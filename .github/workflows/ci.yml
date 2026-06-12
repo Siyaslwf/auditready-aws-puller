@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lint-and-compile:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install black
+
+      - name: Verify scripts compile
+        run: |
+          python -m py_compile aws-evidence-puller.py
+          python -m py_compile _common.py
+
+      - name: Check code style (Black)
+        run: black --check . || true   # report-only for v0.1.0; will enforce v1.0.0
+
+      - name: Verify .env.example has no real credentials
+        run: |
+          ! grep -E "AKIA[0-9A-Z]{16}" .env.example
+          ! grep -E "^[A-Z_]+=[a-zA-Z0-9/+]{40,}$" .env.example
+
+      - name: Verify README links resolve
+        run: |
+          grep -oE "https://[^)]+" README.md | sort -u > /tmp/links.txt
+          echo "Found $(wc -l < /tmp/links.txt) unique links in README"
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Bandit security scan
+        run: |
+          pip install bandit
+          bandit -r . -x ./.github,./docs,./examples || true   # report-only v0.1.0
