@@ -1,2 +1,2 @@
 # auditready-aws-puller
-Open-source SOC 2 evidence puller for AWS — pulls CloudTrail, IAM, GuardDuty into a CSV bundle. Part of the AuditReady toolkit.
+MIT-licensed SOC 2 audit prep for AWS — pulls CloudTrail, IAM, GuardDuty, and Security Hub evidence into auditor-ready CSV bundles. Part of AuditReady.
