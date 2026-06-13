@@ -5,9 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-22C55E.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-3776AB.svg?logo=python&logoColor=fff)](https://www.python.org/downloads/)
 [![CI](https://github.com/Siyaslwf/auditready-aws-puller/actions/workflows/ci.yml/badge.svg)](https://github.com/Siyaslwf/auditready-aws-puller/actions/workflows/ci.yml)
-[![SOC 2 Ready](https://img.shields.io/badge/SOC_2-Type_I_%26_II-3B82F6)](https://siyas.gumroad.com/l/auditready)
+[![SOC 2 Ready](https://img.shields.io/badge/SOC_2-Type_I_%26_II-3B82F6)](https://siyasmind.gumroad.com/l/auditready)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-22C55E.svg)](CONTRIBUTING.md)
-[![AuditReady Full Toolkit](https://img.shields.io/badge/Full_Toolkit-AuditReady-D97757?style=flat)](https://siyas.gumroad.com/l/auditready)
+[![AuditReady Full Toolkit](https://img.shields.io/badge/Full_Toolkit-AuditReady-D97757?style=flat)](https://siyasmind.gumroad.com/l/auditready)
 
 > **Open-source SOC 2 evidence collection for AWS.** Pulls CloudTrail, IAM, GuardDuty, Security Hub, and AWS Config into a single dated CSV bundle your auditor accepts. Built for startups who can't afford Vanta ($24K/yr) or Drata ($14K/yr) but still need to close enterprise deals.
 
@@ -19,7 +19,7 @@ Most early-stage SaaS startups stall at the SOC 2 deal-blocker. Enterprise prosp
 
 This script pulls SOC 2-relevant evidence from your AWS account in <2 minutes, with read-only credentials, and outputs a structured CSV bundle ready to email your auditor.
 
-It's 1 of 4 evidence-puller scripts in **[AuditReady](https://siyas.gumroad.com/l/auditready)** — the full $297 toolkit also covers Vercel + Supabase pullers, 27 stack-tuned SOC 2 policies, 200-item readiness checklist, 90-day sprint plan, and SOC 2 ↔ ISO 27001 ↔ GDPR ↔ NIS2 crosswalk.
+It's 1 of 4 evidence-puller scripts in **[AuditReady](https://siyasmind.gumroad.com/l/auditready)** — the full $297 toolkit also covers Vercel + Supabase pullers, 27 stack-tuned SOC 2 policies, 200-item readiness checklist, 90-day sprint plan, and SOC 2 ↔ ISO 27001 ↔ GDPR ↔ NIS2 crosswalk.
 
 ---
 
@@ -109,7 +109,7 @@ Create an IAM user, attach this minimum policy (also at [docs/iam-policy.json](d
 }
 ```
 
-Even better: assume a read-only role from a separate audit account. The README in the full [AuditReady toolkit](https://siyas.gumroad.com/l/auditready) walks through both patterns.
+Even better: assume a read-only role from a separate audit account. The README in the full [AuditReady toolkit](https://siyasmind.gumroad.com/l/auditready) walks through both patterns.
 
 ---
 
@@ -143,7 +143,7 @@ CONCURRENCY=5                              # parallel API workers
 | **Open source code** | ✅ MIT | partial | — | — | — |
 | **Time to first audit-ready bundle** | 5 min | 30 min | 4–6 weeks | 4–6 weeks | 12+ weeks |
 
-If you need just AWS evidence, this script is enough. If you're building a full SOC 2 program from zero, **[get AuditReady](https://siyas.gumroad.com/l/auditready)**.
+If you need just AWS evidence, this script is enough. If you're building a full SOC 2 program from zero, **[get AuditReady](https://siyasmind.gumroad.com/l/auditready)**.
 
 ---
 
@@ -153,7 +153,7 @@ If you need just AWS evidence, this script is enough. If you're building a full 
 No. SOC 2 reports are issued by a licensed CPA firm after a Type I or Type II audit. This script pulls the **evidence** your CPA will ask you for. Skipping the script means scrambling for screenshots the week of your audit.
 
 ### Can I use this for SOC 2 Type II?
-Yes. Run it weekly (cron + GitHub Actions example in the [full toolkit](https://siyas.gumroad.com/l/auditready)) so you have continuous-period evidence rather than point-in-time.
+Yes. Run it weekly (cron + GitHub Actions example in the [full toolkit](https://siyasmind.gumroad.com/l/auditready)) so you have continuous-period evidence rather than point-in-time.
 
 ### What about ISO 27001 / GDPR / NIS2?
 The evidence overlaps ~70%. The crosswalk in the full toolkit maps each AWS evidence item to ISO 27001 Annex A, GDPR Art. 32, and NIS2 Art. 21.
@@ -173,7 +173,7 @@ Yes — edit `aws-evidence-puller.py`. PRs welcome. For pre-built customizations
 ### How often should I run it?
 - Pre-audit: once
 - SOC 2 Type II: weekly via cron
-- Continuous monitoring: daily via GitHub Actions ([example workflow in the toolkit](https://siyas.gumroad.com/l/auditready))
+- Continuous monitoring: daily via GitHub Actions ([example workflow in the toolkit](https://siyasmind.gumroad.com/l/auditready))
 
 ### Is the script audit-firm-tested?
 Output format mirrors what Big-4 + boutique CPA firms ask for. Specific firm walkthroughs included in the full toolkit's Pro tier.
@@ -182,7 +182,7 @@ Output format mirrors what Big-4 + boutique CPA firms ask for. Specific firm wal
 - ⭐ Star this repo
 - 🐛 Open issues for bugs / feature ideas
 - 💬 Join [Discussions](https://github.com/Siyaslwf/auditready-aws-puller/discussions)
-- 💰 [Buy the full toolkit](https://siyas.gumroad.com/l/auditready) — directly funds maintenance
+- 💰 [Buy the full toolkit](https://siyasmind.gumroad.com/l/auditready) — directly funds maintenance
 
 ---
 
@@ -200,7 +200,7 @@ Want a feature? Open an issue or [book a call](https://cal.com/siyas/auditready-
 
 ## 📚 Related projects
 
-- **[AuditReady full toolkit](https://siyas.gumroad.com/l/auditready)** — 27 policies × 3 stacks + Vercel + Supabase pullers + checklist + sprint + crosswalk
+- **[AuditReady full toolkit](https://siyasmind.gumroad.com/l/auditready)** — 27 policies × 3 stacks + Vercel + Supabase pullers + checklist + sprint + crosswalk
 - **[StrongDM Comply](https://github.com/strongdm/comply)** — Apache-2.0 policy backbone that AuditReady's full toolkit is derived from
 
 ---
